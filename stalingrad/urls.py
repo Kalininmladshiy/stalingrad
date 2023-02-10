@@ -6,7 +6,9 @@ from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='main_page')
+    path('', views.index, name='main_page'),
+    path('map/', views.places_map, name='map'),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

@@ -22,7 +22,7 @@
                     <li><a href="#">Хроника битвы </a></li>
                     <li><a href="#">Материалы</a></li>
                     <li><a href="#">Командный состав</a></li>
-                    <li><a href="{% url 'map' %}">Памятные места</a></li>
+                    <li><a href="#">Памятные места</a></li>
                     <li><a href="#">Книги</a></li>
                     <li><a href="#">Статьи и лекции</a></li>
                     <li><a href="#">О нас</a></li>
@@ -32,30 +32,8 @@
     </div>
 
     <!--================End Header Menu Area =================-->
-    <div class="video">
-        <div class="container">
-            <div class="video_inner">
-                <video autoplay loop muted class="bgvideo" src="{% static 'video/maine_movie.mp4' %}"></video>
-            </div>
-        </div>
+    <div class="map">
+        {{ map|safe }}
     </div>
-    <!--================ Start Footer Area =================-->
-    <div class="menu">
-        <div class="info_inner">
-            <div class="item">
-                <div class="number">200</div>
-                <div class="text">Дней и ночей в аду</div>
-            </div>
-            <div class="item">
-                <div class="number">15</div>
-                <div class="text">Минут средняя жизнь в городе</div>
-            </div>
-            <div class="item">
-                <div class="number">2629619</div>
-                <div class="text">Человек погибло</div>
-            </div>
-        </div>
-    </div>
-    <!--================ End Footer Area =================-->
 </body>
 </html>

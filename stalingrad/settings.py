@@ -25,6 +25,7 @@ INSTALLED_APPS = [
 
     'main_page',
     'debug_toolbar',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
