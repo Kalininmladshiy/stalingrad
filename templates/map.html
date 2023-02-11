@@ -1,39 +1,8 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сталинград</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    <!--================Start Header Menu Area =================-->
-    <div class="menu">
-        <div class="container">
-            <div class="menu_inner">
-                <div class="logo">
-                    <a href="{% url 'main_page' %}">
-                        <img src="{% static 'img/logo.png' %}" alt="Логотип">
-                    </a>
-                </div>
-                <ul class="nav">
-                    <li><a href="#">Хроника битвы </a></li>
-                    <li><a href="#">Материалы</a></li>
-                    <li><a href="#">Командный состав</a></li>
-                    <li><a href="#">Памятные места</a></li>
-                    <li><a href="#">Книги</a></li>
-                    <li><a href="#">Статьи и лекции</a></li>
-                    <li><a href="#">О нас</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
 
-    <!--================End Header Menu Area =================-->
     <div class="map">
         {{ map|safe }}
     </div>
-</body>
-</html>
+{% endblock %}

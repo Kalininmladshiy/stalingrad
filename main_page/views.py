@@ -13,10 +13,8 @@ DEFAULT_IMAGE_URL = (
 
 
 def add_place_on_map(folium_map, lat, lng, title, image_url=DEFAULT_IMAGE_URL):
-    icon = folium.features.CustomIcon(
-        image_url,
-        icon_size=(20, 20),
-    )
+    folium_map.get_root().header.add_child(folium.CssLink('../static/css/style.css'))
+    icon = folium.DivIcon(html=f"""<div><button class="animate-pulse"><a href="#"></a></button></div>""")
     folium.Marker(
         [lng, lat],
         icon=icon,
